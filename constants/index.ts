@@ -167,15 +167,15 @@ export const transformationTypes = {
   },
 };
 
-export const reportTypes = {
+export const reportTypes: Record<string, { type: string; title: string; subTitle: string; config?: { restore?: boolean }; icon: string }> = {
   research: {
-    type: "research",
-    title: "Research Topic",
-    subTitle: "Create a comprehensive topic research  ",
+    type: 'research',
+    title: 'Research Report',
+    subTitle: 'Detailed research report',
     config: { restore: true },
-    icon: "image.svg",
+    icon: 'research-icon',
   },
-  
+  // Weitere Typen hinzufügen, falls vorhanden
 };
 
 

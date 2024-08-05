@@ -5,7 +5,7 @@ import { getUserById } from '@/lib/actions/user.actions';
 import { auth } from '@clerk/nextjs';
 import { redirect } from 'next/navigation';
 
-const AddReportTypesPage = async ({ params: { type } }: SearchParamProps) => {
+const AddReportTypesPage = async ({ params: { type } }: { params: { type: string } }) => {
   const { userId } = auth();
   const report = reportTypes[type];
 
@@ -27,7 +27,7 @@ const AddReportTypesPage = async ({ params: { type } }: SearchParamProps) => {
           language="en"
           action="Add"
           userId={user._id}
-          type={report.type as ReportTypeKey}
+          type={type as keyof typeof reportTypes}
           creditBalance={user.creditBalance}
         />
       </section>
