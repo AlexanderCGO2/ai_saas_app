@@ -5,6 +5,11 @@ export const navLinks = [
     icon: "/assets/icons/home.svg",
   },
   {
+    label: "Generate Report",
+    route: "/reports/add/research",
+    icon: "/assets/icons/image.svg",
+  },
+  {
     label: "Image Restore",
     route: "/transformations/add/restore",
     icon: "/assets/icons/image.svg",
@@ -122,11 +127,12 @@ export const plans = [
 export const transformationTypes = {
   restore: {
     type: "restore",
-    title: "Restore Image",
-    subTitle: "Refine images by removing noise and imperfections",
+    title: "Image Restore",
+    subTitle: "Restore the image by using AI",
     config: { restore: true },
     icon: "image.svg",
   },
+  
   removeBackground: {
     type: "removeBackground",
     title: "Background Remove",
@@ -161,6 +167,18 @@ export const transformationTypes = {
   },
 };
 
+export const reportTypes = {
+  research: {
+    type: "research",
+    title: "Research Topic",
+    subTitle: "Create a comprehensive topic research  ",
+    config: { restore: true },
+    icon: "image.svg",
+  },
+  
+};
+
+
 export const aspectRatioOptions = {
   "1:1": {
     aspectRatio: "1:1",
@@ -189,5 +207,10 @@ export const defaultValues = {
   prompt: "",
   publicId: "",
 };
+
+
+
+
+
 
 export const creditFee = -1;
