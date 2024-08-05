@@ -316,8 +316,9 @@
   }
 
   .sidebar-logo {
-    @apply flex items-center gap-2 md:py-2;
-  }
+    @apply flex items-center justify-center w-48 h-48 md:w-48 md:h-48 overflow-hidden ;
+}
+
 
   .sidebar-nav {
     @apply h-full flex-col justify-between md:flex md:gap-4;
